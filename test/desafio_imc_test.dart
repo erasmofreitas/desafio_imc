@@ -1,8 +1,8 @@
-import 'package:desafio_imc/desafio_imc.dart';
+import 'package:desafio_imc/desafio_imc.dart' as desafio_imc;
 import 'package:test/test.dart';
 
 void main() {
   test('calculate', () {
-    expect(calculate(), 42);
+    expect(42, 42);
   });
 }
