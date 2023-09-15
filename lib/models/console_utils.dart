@@ -29,6 +29,13 @@ class ConsoleUtils {
     do {
       try {
         var value = lerStringComTexto(texto).toUpperCase();
+        if (value.contains(',') && texto.contains('peso')) {
+          value = value.replaceAll(",", ".");
+        }
+        if ((value.contains(',') || value.contains('.')) &&
+            texto.contains('altura')) {
+          value = value.replaceAll(",", "").replaceAll(".", "");
+        }
 
         if (value == valorSaida.toUpperCase()) {
           return -1;
